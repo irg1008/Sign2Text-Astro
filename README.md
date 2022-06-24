@@ -20,4 +20,4 @@ Transcripción de lenguaje de signos (a nivel de palabra) mediante Deep Learning
 
 ## List of tasks
 
-[ ] Add example grid and landing
+- [ ] Add example grid and landing
