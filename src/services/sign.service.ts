@@ -2,6 +2,7 @@ const endpoint = import.meta.env.PUBLIC_SIGN_URI;
 
 interface Sign {
 	target: string;
+	error: Error;
 }
 
 export const getSignForVideo = async (video: File): Promise<Sign> => {
@@ -16,8 +17,9 @@ export const getSignForVideo = async (video: File): Promise<Sign> => {
 			body: formData,
 		});
 
-		return await res.json();
+		const data = await res.json();
+		return { ...data, error: "" };
 	} catch (err) {
-		throw err;
+		return { target: "", error: err as Error };
 	}
 };

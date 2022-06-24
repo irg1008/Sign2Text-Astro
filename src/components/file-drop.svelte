@@ -53,8 +53,9 @@
 	const getSign = async () => {
 		loadingSign = true;
 		if (sign) return;
-		const res = await getSignForVideo(video);
-		sign = res.target;
+		const { target, error } = await getSignForVideo(video);
+		console.log(error);
+		if (target) sign = target;
 		loadingSign = false;
 	};
 </script>
