@@ -10,10 +10,14 @@ export const getSignForVideo = async (video: File): Promise<Sign> => {
 	const formData = new FormData();
 	formData.append("video", video);
 
-	const res = await fetch(`${endpoint}/sign`, {
-		method: "POST",
-		body: formData,
-	});
+	try {
+		const res = await fetch(`${endpoint}/sign`, {
+			method: "POST",
+			body: formData,
+		});
 
-	return await res.json();
+		return await res.json();
+	} catch (err) {
+		throw err;
+	}
 };
