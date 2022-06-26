@@ -54,7 +54,6 @@
 		loadingSign = true;
 		if (sign) return;
 		const { target, error } = await getSignForVideo(video);
-		console.log(error);
 		if (target) sign = target;
 		loadingSign = false;
 	};
