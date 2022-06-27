@@ -7,15 +7,23 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
-  <title>Sign2Text - ASL Translator</title>
+  <title>Sign2Text - Traductor de ASL a texto</title>
   <link rel="icon" href="favicon.webp" type="image/x-icon" />
 </head>
 
-<body class="flex w-full min-h-screen bg-gradient-to-tl from-yellow-400/20 to-fuchsia-500/20">
+<body class="flex w-full min-h-screen bg-gradient-to-tl from-yellow-400/20 to-fuchsia-500/20 flex-col gap-8 p-8">
+  <header class="flex items-center justify-center">
+    <slot name="header" />
+  </header>
+
   <main
-    class="flex flex-col items-center justify-center gap-16 md:flex-row border-[6px] border-dashed border-neutral-600/10 m-8 md:m-16 flex-1 rounded-2xl p-8">
+    class="flex flex-col items-center justify-center gap-16 md:flex-row border-[6px] border-dashed border-neutral-600/10 mx-8 flex-1 rounded-2xl p-8">
     <slot />
   </main>
+
+  <footer class="flex items-center justify-center gap-4">
+    <slot name="footer" />
+  </footer>
 </body>
 
 </html>

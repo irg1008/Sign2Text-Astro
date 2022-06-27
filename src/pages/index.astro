@@ -1,16 +1,36 @@
 ---
 import Layout from "layout/main.astro"
-import FileDrop from "components/file-drop.svelte"
+import Dropzone from "components/dropzone.svelte"
+import GitlabIcon from "components/gitlab-icon.svelte"
 ---
 
 <Layout>
+	<div slot="header" class="rounded-lg bg-blue-400 text-md text-neutral-50 p-4 font-semibold text-center leading-loose">
+		<p>IMPORTANTE: Debido a que el modelo consume muchos recursos, se pueden producir errores inesperados. Si le
+			ocurre esto,
+			por
+			favor, envíe un correo a <a
+				class="text-sky-900 underline decoration-wavy decoration-sky-900 transition-all hover:text-yellow-400 hover:decoration-yellow-400 duration-200"
+				href="mailto:support@sign2text.com?subject=Ha ocurrido un error, ¡¡socorro!!" class="">support@sign2text.com</a>
+			para que
+			podamos
+			solucionarlo cuanto antes. ¡Gracias!
+		</p>
+	</div>
+
 	<div class="flex flex-col gap-10">
 		<img src="logo.png" alt="Logo" class="w-full max-w-sm drop-shadow-xl" />
 		<h1 class="text-xl leading-relaxed text-center sm:text-2xl md:text-3xl text-neutral-400">
-			Drag and drop your video here
+			Arrastre y suelte el video aquí
 		</h1>
 	</div>
-	<section class="flex flex-col gap-8">
-		<FileDrop client:load />
-	</section>
+	<Dropzone client:load />
+
+
+	<div slot="footer" class="text-center">
+		<a class="flex text-lg items-center gap-2 hover:underline text-neutral-500 hover:text-neutral-800 transition-all duration-200 cursor-pointer"
+			href="https://gitlab.com/HP-SCDS/Observatorio/2021-2022/sign2text/ubu-sign2text" target="_blank">
+			<GitlabIcon class="text-3xl" /> Visit the repo on GitLab
+		</a>
+	</div>
 </Layout>

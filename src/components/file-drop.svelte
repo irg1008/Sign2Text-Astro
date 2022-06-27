@@ -41,7 +41,7 @@
 		const file = e.dataTransfer?.files?.[0];
 
 		if (file?.type !== "video/mp4") {
-			error = "Only MP4 files are supported";
+			error = "Solo videos MP4 están soportados";
 			return;
 		}
 
@@ -51,9 +51,14 @@
 	};
 
 	const getSign = async () => {
-		loadingSign = true;
 		if (sign) return;
-		const { target, error } = await getSignForVideo(video);
+
+		loadingSign = true;
+		const { target, error: apiError } = await getSignForVideo(video);
+		if (apiError)
+			error =
+				"Ha ocurrido un error. Por favor póngase en contacto en support@sign2text.com";
+
 		if (target) sign = target;
 		loadingSign = false;
 	};
@@ -121,9 +126,9 @@
 		<h1
 			in:fly={{ duration: 200, easing: backOut, y: -100 }}
 			out:scale={{ duration: 200, easing: backIn }}
-			class="font-bold text-center uppercase text-8xl text-neutral-600"
+			class="font-bold text-center uppercase text-neutral-600 md:text-6xl lg:text-8xl text-4xl"
 		>
-			Now drop it!
+			Suelte el video aquí
 		</h1>
 	</div>
 {/if}
