@@ -2,6 +2,7 @@
 
 <table align="center"><tr><td align="center" width="9999">
 
+<br />
 <img align="center" src="./public/logo.svg" alt="logo" width="400" />
 
 <br />
@@ -18,6 +19,14 @@ Transcripción de lenguaje de signos (a nivel de palabra) mediante Deep Learning
 
 ---
 
-## List of tasks
+## How to start
 
-- [ ] Add example grid and landing
+`npm i`
+
+`npm run dev`
+
+## Create production build
+
+`npm run build`
+
+`npm run start`
