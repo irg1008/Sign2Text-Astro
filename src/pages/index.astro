@@ -27,10 +27,11 @@ import GitlabIcon from "components/gitlab-icon.svelte"
 	<Dropzone client:load />
 
 
-	<div slot="footer" class="text-center">
+	<div slot="footer" class="text-center flex flex-col items-center justify-center">
 		<a class="flex text-lg items-center gap-2 hover:underline text-neutral-500 hover:text-neutral-800 transition-all duration-200 cursor-pointer"
 			href="https://gitlab.com/HP-SCDS/Observatorio/2021-2022/sign2text/ubu-sign2text" target="_blank">
 			<GitlabIcon class="text-3xl" /> Visit the repo on GitLab
 		</a>
+		<p class="text-neutral-400">Signos soportados: all, before, book, drink, help, no, walk, yes</p>
 	</div>
 </Layout>
