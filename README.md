@@ -13,19 +13,19 @@ Transcripción de lenguaje de signos (a nivel de palabra) mediante Deep Learning
 
 ---
 
-## How it looks
+## Sube un vídeo y detecta el signo
 
 ![Example](./public//example.gif)
 
 ---
 
-## How to start
+## Como ejecutar la versión de desarrollo
 
 `npm i`
 
 `npm run dev`
 
-## Create production build
+## Crea una versión de producción
 
 `npm run build`
 
