@@ -21,12 +21,10 @@ Transcripción de lenguaje de signos (a nivel de palabra) mediante Deep Learning
 
 ## Como ejecutar la versión de desarrollo
 
-`npm i`
-
-`npm run dev`
+1. Instalamos las depenencias con: `npm i`
+2. Ejecutamos la aplicación usando `npm run dev`
 
 ## Crea una versión de producción
 
-`npm run build`
-
-`npm run start`
+1. Construimos la aplicación: `npm run build`
+2. Ejecutamos el entorno de producción: `npm run start`
